@@ -1,0 +1,17 @@
+{{#extend 'layouts/main'}}
+
+{{#content 'content'}}
+<h1>Dashboard</h1>
+{{#if posts.length}}
+  <ul>
+    {{#each posts}}
+    <li>
+      <h2>{{title}}</h2>
+      <p>Posted by {{username}} on {{createdAt}}</p>
+    </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No blog posts found.</p>
+{{/if}}
+{{/content}}
